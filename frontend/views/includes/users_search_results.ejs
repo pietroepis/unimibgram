@@ -1,0 +1,11 @@
+<% for (let i=0; i<users.length; i++){ %>
+    <div class="result">
+        <% if (users[i].privacy != 2){ %>
+            <img src="<%= baseUrl %>/users_imgs/ic_user_default.png"/>
+        <% } else{ %>
+            <img src="<%= baseUrl %>/users_imgs/<%= users[i].immagineProfilo %>"/>
+        <% } %>
+        <span class="username"><%= users[i].username %></span>
+        <span class="add-btn" data-id=<%= users[i].id %>>Aggiungi</span>
+    </div>
+<% } %>

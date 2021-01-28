@@ -1,0 +1,76 @@
+<header>
+    <span id="current-username"><%= user.username %></span>
+    
+    <h1 class="title">Unimibgram</h1>
+
+    <div class="actions">
+        <img id="user-btn" src="assets/img/ic_user.png"/>
+        <img id="logout-btn" src="assets/img/ic_logout.png"/>
+    </div>
+</header>
+
+<div id="box-main" class="box">
+    <div class="wrapper">
+        <div id="box-chat" class="box">
+            <div class="box-top">
+                <span class="title">Chat</span>
+                <div class="btn-refresh-chat action">
+                    <img src="assets/img/ic_refresh.png"/>
+                </div>
+            </div>
+
+            <div id="msg-list" class="box-content">
+                <div class="wrapper">
+                    <span id="select-chat">Selezionare una chat</span>
+                </div>
+            </div>
+
+            <div class="box-bottom">
+                <input id="txt-message" type="text" placeholder="Scrivi un messaggio..."/>
+                
+                <div class="btn-send-msg action">
+                    <img src="assets/img/ic_send.png"/>
+                </div>
+
+                <div class="btn-send-attach action">
+                    <img src="assets/img/ic_attach.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+        <div id="box-info" class="box">
+            <div id="box-info">
+                <div class="box-top">
+                    <span class="title">Informazioni Contatto</span>
+                </div>
+
+                <div class="box-content"></div>
+
+                <div class="box-bottom">
+                    <div class="btn-remove-contact action">
+                        <img src="assets/img/ic_delete.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="box-contacts" class="box">
+    <div class="box-top">
+        <span class="title">La mia rubrica</span>
+        <div class="btn-add-contact action">
+            <img src="assets/img/ic_plus.png"/>
+        </div>
+    </div>
+
+    <div class="box-content">
+        <div class="wrapper"></div>
+    </div>
+</div>
+
+<input id="file-input" type="file" name="name"  accept="image/png,video/mp4,application/pdf"/>
+
+<%- include("../popups.ejs"); %>

@@ -1,0 +1,53 @@
+ISTRUZIONI PER LA CONFIGURAZIONE DEL SOFTWARE
+
+DATABASE
+Importare il file unimibgram.sql in un DBMS MySQL
+
+--------------------------------------------------------------------------------------------------------
+
+BACKEND
+Nel file .env impostare le variabili:
+MYSQL_HOST: indirizzo dell'host su cui è presente il database
+MYSQL_DB: è possibile lasciare il valore "unimibgram" se il nome del database importato dal file .sql 	allegato non viene modificato
+MYSQL_USER: username dell'utente per accedere al database
+MYSQL_PASSWORD: password dell'utente per accedere al database
+JWT_KEY: lasciare quella già definita
+
+--------------------------------------------------------------------------------------------------------
+
+API_GATEWAY
+Nel file .env impostare le variabili:
+BACKEND_ADDRESS: "http://<indirizzo_backend>:2001"
+	indirizzo_backend è l'indirizzo dell'host su cui viene eseguito il componente backend
+FRONTEND_ADDRESS: "http://<indirizzo_frontend>:2002"
+	indirizzo_frontend è l'indirizzo dell'host su cui viene eseguito il componente frontend
+
+--------------------------------------------------------------------------------------------------------
+
+FRONTEND
+Nel file .env impostare le variabili:
+BACKEND_ADDRESS: "http://<indirizzo_backend>:2001"
+	indirizzo_backend è l'indirizzo dell'host su cui viene eseguito il componente backend
+GATEWAY_ADDRESS: "http://<indirizzo_gateway>:2000"
+	indirizzo_gateway è l'indirizzo dell'host su cui viene eseguito il componente api_gateway
+
+Nel file assets/js/api.js impostare le variabili:
+BASE_URL_GATEWAY: "http://<indirizzo_gateway>:2000/"
+	indirizzo_gateway è l'indirizzo dell'host su cui viene eseguito il componente api_gateway
+BASE_URL_VIEWS: "http://<indirizzo_frontend>:2002/"
+	indirizzo_frontend è l'indirizzo dell'host su cui viene eseguito il componente frontend
+
+Nel file assets/js/chat.js impostare il parametro del metodo io.connect a riga 17 con "http://<indirizzo_gateway>:2000/"
+	indirizzo_gateway è l'indirizzo dell'host su cui viene eseguito il componente api_gateway
+
+Nel file views/index.ejs a riga 11 definire il path del file socket.io.js nel seguente modo "http://<indirizzo_gateway>/socket.io/socket.io.js"
+	indirizzo_gateway è l'indirizzo dell'host su cui viene eseguito il componente api_gateway
+
+--------------------------------------------------------------------------------------------------------
+
+Avviare le 3 componenti (frontend, backend e api_gateway) da 3 terminali tramite il comando "node main.js"
+
+--------------------------------------------------------------------------------------------------------
+
+Tramite il browser andare all'indirizzo "http://<indirizzo_frontend>:2002"
+	indirizzo_frontend è l'indirizzo dell'host su cui viene eseguito il componente frontend

@@ -1,0 +1,18 @@
+<% for (let i=0; contacts != null && i<contacts.length; i++){ %>
+    <div class="user-card" data-id="<%= contacts[i].id %>">
+        <% if (contacts[i].toRead > 0){ %>
+            <div id="notification-user-<%= contacts[i].id %>" class="notifications">
+                <span><%= contacts[i].toRead %></span>
+            </div>
+        <% } %>
+        
+        <% if (contacts[i].privacy == 0 || (contacts[i].privacy == 1 && contacts[i].visible != 2)){ %>
+            <img src="<%= baseUrl %>/users_imgs/ic_user_default.png"/>
+        <% } else{ %>
+            <img src="<%= baseUrl %>/users_imgs/<%= contacts[i].immagineProfilo %>"/>
+        <% } %>
+        <div class="name">
+            <span><%= contacts[i].username %></span>
+        </div>
+    </div>
+<% } %>

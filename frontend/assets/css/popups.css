@@ -1,0 +1,82 @@
+.modal-dialog{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    width: 65%;
+    max-width: unset;
+}
+
+.modal-header{
+    height: 40px;
+    padding: 9px 1em;
+    font-size: 1.5em;
+    color: var(--color-theme-main);
+    border-bottom: 3px var(--color-theme-main) solid;;
+}
+
+.modal-content{
+    border-radius: 0;
+    border: none;
+}
+
+/* add-contact-popup */
+#add-contact-popup .modal-body{
+    height: 30em;
+}
+
+#add-contact-popup .row, #add-contact-popup .row > div{
+    height: 100%;
+}
+
+#add-contact-popup .search-results{
+    height: 100%;
+    overflow: auto;
+}
+
+#add-contact-popup .search-results .result{
+    width: 80%;
+    height: 5em;
+    border-left: 2px var(--color-theme-main) solid;
+    padding: 1em;
+}
+
+#add-contact-popup .search-results .result:not(:last-child){
+    margin-bottom: 1em;
+}
+
+#add-contact-popup .search-results .result img{
+    height: 3em;
+    border-radius: 50%;
+    margin-right: 2em;
+}
+
+#add-contact-popup .search-results .result .username{
+    font-size: 1.2em;
+    color: var(--color-dark-grey);
+    margin-right: 3em;
+}
+
+#add-contact-popup .search-results .result .add-btn{
+    font-size: 1.2em;
+    color: var(--color-theme-main);
+}
+
+/* user-profile-popup */
+#user-profile-popup .profile-image > *:not(#profile-image-input){
+    display: inline;
+}
+
+#user-profile-popup .profile-image input[type="text"]{
+    width: auto;
+    margin-left: 2em;
+}
+
+#btn-save-profile{
+    float: right;
+}
+
+/* info-popup */
+#info-popup #info{
+    font-size: 1.5em;
+}

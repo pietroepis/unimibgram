@@ -1,0 +1,94 @@
+<div class="modal" tabindex="-1" role="dialog" id="add-contact-popup">
+    <div class="modal-dialog with-open-menu" role="document">
+        <div class="modal-content">
+            <div class="content-wrapper">
+                <div class="modal-header">
+                    Aggiungi contatto
+                </div>
+                
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <input type="text" placeholder="Username"/>
+                        </div>
+
+                        <div class="col-md-7 search-results"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="user-profile-popup">
+    <div class="modal-dialog with-open-menu" role="document">
+        <div class="modal-content">
+            <div class="content-wrapper">
+                <div class="modal-header">
+                    Modifica Profilo
+                </div>
+                
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" placeholder="Username" id="username"/>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="text" placeholder="Descrizione" id="descrizione"/>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="text" placeholder="Telefono" id="telefono"/>
+                        </div>
+
+                        <div class="col-md-6 profile-image">
+                            <input id="profile-image-input" type="file" accept="image/png"/>
+                            <button>Immagine Profilo</button>
+                            <input type="text" readonly/>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="password" placeholder="Password" id="password"/>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="password" placeholder="Conferma Password" id="passwordConfirm"/>
+                        </div>
+
+                        <div class="col-md-6">
+                            <select id="privacy">
+                                <option value="0">Nessuno</option>
+                                <option value="1">Contatti</option>
+                                <option value="2">Tutti</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6"></div>
+
+                        <div class="col-md-6">
+                            <button id="btn-save-profile" class="full">Salva</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="info-popup">
+    <div class="modal-dialog with-open-menu" role="document">
+        <div class="modal-content">
+            <div class="content-wrapper">
+                <div class="modal-header">
+                    Info
+                </div>
+                
+                <div class="modal-body">
+                    <p id="info"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

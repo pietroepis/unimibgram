@@ -1,0 +1,12 @@
+<% if (info.visible){ %>
+    <img class="user-image" src="<%= baseUrl %>/users_imgs/<%= info.immagineProfilo %>"/>
+    <h2 class="user-name"><%= info.username %></h2>
+    <p class="user-description"><%= info.descrizione %></p>
+    <span class="user-phone-number-label">Numero di telefono</span>
+    <span class="user-phone-number-value"><%= info.telefono %></span>
+<% } else{ %>
+    <div id="info-reserved">
+        <img src="assets/img/ic_lock.png"/>
+        <span>Informazioni Private</span>
+    </div>
+<% } %>
